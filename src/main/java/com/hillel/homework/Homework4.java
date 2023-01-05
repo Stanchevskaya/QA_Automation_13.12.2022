@@ -11,5 +11,9 @@ public class Homework4 {
 
         System.out.println("Об'єм паралелепіпеда = " + volume);
 
+        int length = 4 * (a+b+c);
+
+        System.out.println("Сумарна довжина сторін = " + length);
+
     }
 }
