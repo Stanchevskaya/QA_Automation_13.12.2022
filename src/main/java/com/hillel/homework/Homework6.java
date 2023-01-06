@@ -29,9 +29,5 @@ if (averageT1 > averageT2) {
 }
 
 
-
-
-
-
     }
 }
