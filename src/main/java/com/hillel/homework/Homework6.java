@@ -1,33 +1,57 @@
 package com.hillel.homework;
 
+import java.util.Scanner;
+
 public class Homework6 {
     public static void main(String[] args) {
 
-String team1 = "Team1";
-int a = 10;
-int b = 7;
-int c = 14;
-int d = 11;
-int e = 12;
+        Scanner scanner = new Scanner(System.in);
 
-String team2 = "Team2";
-int f = 18;
-int g = 6;
-int h = 10;
-int i = 13;
-int j = 9;
+        System.out.println("Enter team 1 name: ");
+        String team1Name = scanner.nextLine();
 
-int averageT1 = (a+b+c+d+e)/5;
-int averageT2 = (f+g+h+i+j)/5;
+        int[] team1Scores = new int[5];
+        for (int i = 0; i < team1Scores.length; i++) {
+            System.out.println("Enter score for player " + (i+1) + " on team 1: ");
+            team1Scores[i] = scanner.nextInt();
+        }
 
-if (averageT1 > averageT2) {
-    System.out.println("Перемогла команда " + team1 + ", набрала " + averageT1 + " очків.");
-} else if (averageT1 < averageT2) {
-    System.out.println("Перемогла команда " + team2 + ", набрала " + averageT2 + " очків.");
-} else {
-    System.out.println("Перемогла дружба, обидві команди набрали " + averageT1 + " очків.");
-}
+        System.out.println("Enter team 2 name: ");
+        String team2Name = scanner.next();
+
+        int[] team2Scores = new int[5];
+        for (int i = 0; i < team2Scores.length; i++) {
+            System.out.println("Enter score for player " + (i+1) + " on team 2: ");
+            team2Scores[i] = scanner.nextInt();
+        }
+
+        int team1Total = 0;
+        for (int score : team1Scores) {
+            team1Total += score;
+        }
+        double team1Average = (double) team1Total / team1Scores.length;
 
 
+        int team2Total = 0;
+        for (int score : team2Scores) {
+            team2Total += score;
+        }
+        double team2Average = (double) team2Total / team2Scores.length;
+
+
+        String winningTeamName = "";
+        double winningScore = 0;
+        if (team1Average > team2Average) {
+            winningTeamName = team1Name;
+            winningScore = team1Average;
+            System.out.println("The winning team is " + winningTeamName + " with a score of " + winningScore + " points.");
+
+        } else if (team1Average < team2Average){
+            winningTeamName = team2Name;
+            winningScore = team2Average;
+            System.out.println("The winning team is " + winningTeamName + " with a score of " + winningScore + " points.");
+        } else;
+
+        System.out.println("Both teams scored " + winningScore + " points.");
     }
 }
