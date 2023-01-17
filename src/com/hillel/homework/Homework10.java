@@ -21,14 +21,12 @@ public class Homework10 {
         int[][] matrix = new int[M][N];
         int[][] transposedMatrix = new int[N][M];
 
-        // Transpose the matrix
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
                 transposedMatrix[j][i] = matrix[i][j];
             }
         }
 
-        // Print the transposed matrix
         System.out.println("Matrix M x N:");
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
@@ -39,14 +37,12 @@ public class Homework10 {
         int[][] matrix2 = new int[N][M];
         int[][] transposedMatrix2 = new int[M][N];
 
-        // Transpose the matrix
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 transposedMatrix2[j][i] = matrix2[i][j];
             }
         }
 
-        // Print the transposed matrix
         System.out.println("Matrix N x M:");
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
