@@ -1,4 +1,4 @@
-package com.hillel.homework;
+package com.hillel.homework.homework12;
 
 public class Burger {
     String bun;
