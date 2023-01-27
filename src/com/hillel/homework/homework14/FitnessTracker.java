@@ -3,10 +3,10 @@ package com.hillel.homework.homework14;
 import java.time.LocalDate;
 
     class FitnessTracker {
-        private String name;
-        private LocalDate birthdate;
-        private String email;
-        private String phone;
+        private final String name;
+        private final LocalDate birthdate;
+        private final String email;
+        private final String phone;
         private String surname;
         private double weight;
         private double bloodPressure;
