@@ -10,7 +10,7 @@ public class Main {
         int kittyAge = kitty.getAge();
         double kittyWeight = kitty.getWeight();
 
-        System.out.println("Cat name: " + kittyName);
+        System.out.println("Cat's name: " + kittyName);
         System.out.println("Cat's age: " + kittyAge);
         System.out.println("Cat's weight: " + kittyWeight);
     }
