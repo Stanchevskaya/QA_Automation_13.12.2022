@@ -11,12 +11,22 @@ public class Homework10 {
         }
         int M = input.nextInt();
 
+        if (M < 0) {
+            System.out.println("Please enter a valid number");
+            M = input.nextInt();
+        }
+
         System.out.print("Enter the number (N): ");
         while (!input.hasNextInt()) {
             System.out.println("Please enter a valid number");
             input.next();
         }
         int N = input.nextInt();
+
+        if (N < 0) {
+            System.out.println("Please enter a valid number");
+            N = input.nextInt();
+        }
 
         int[][] matrix = new int[M][N];
         int[][] transposedMatrix = new int[N][M];
