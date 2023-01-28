@@ -1,14 +1,23 @@
 package com.hillel.homework.homework15;
 
-class Cat {
+public class Cat {
     private String name;
     private int age;
     private double weight;
 
-    public Cat() {
-        setName(name);
-        setAge(age);
-        setWeight(weight);
+    public Cat(String name, int age, double weight) {
+        if (name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be empty.");
+        }
+        if (age < 0) {
+            throw new IllegalArgumentException("Age cannot be less than 0.");
+        }
+        if (weight <= 0) {
+            throw new IllegalArgumentException("Weight cannot be less or equal to 0.");
+        }
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -16,11 +25,10 @@ class Cat {
     }
 
     public void setName(String name) {
-        if (name != null && !name.trim().isEmpty()) {
-            this.name = name;
-        } else {
-            throw new IllegalArgumentException("Invalid name, name should not be empty or null");
+        if (name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be empty.");
         }
+        this.name = name;
     }
 
     public int getAge() {
@@ -28,11 +36,10 @@ class Cat {
     }
 
     public void setAge(int age) {
-        if (age > 0) {
-            this.age = age;
-        } else {
-            throw new IllegalArgumentException("Invalid age");
+        if (age < 0) {
+            throw new IllegalArgumentException("Age cannot be less than 0.");
         }
+        this.age = age;
     }
 
     public double getWeight() {
@@ -40,11 +47,9 @@ class Cat {
     }
 
     public void setWeight(double weight) {
-        if (weight > 0) {
-            this.weight = weight;
-        } else {
-            throw new IllegalArgumentException("Invalid weight");
+        if (weight <= 0) {
+            throw new IllegalArgumentException("Weight cannot be less or equal to 0.");
         }
+        this.weight = weight;
     }
 }
-
