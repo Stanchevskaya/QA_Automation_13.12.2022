@@ -1,4 +1,6 @@
-package com.hillel.homework16;
+package com.hillel.homework16.products;
+
+import com.hillel.homework16.abstraction.Product;
 
 public class Bananas extends Product {
 

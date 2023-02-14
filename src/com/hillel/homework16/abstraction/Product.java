@@ -1,4 +1,4 @@
-package com.hillel.homework16;
+package com.hillel.homework16.abstraction;
 
 public abstract class Product {
 

@@ -1,6 +1,8 @@
-package com.hillel.homework16;
+package com.hillel.homework16.products;
 
-public class Apples extends Product {
+import com.hillel.homework16.abstraction.Product;
+
+public final class Apples extends Product {
     private String appleType;
 
     public Apples(double weight, String productName, String manufacturer, String design, String appleType) {
