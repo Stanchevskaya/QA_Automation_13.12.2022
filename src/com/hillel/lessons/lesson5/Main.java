@@ -16,6 +16,7 @@ public class Main {
         System.out.println(a == b);
         System.out.println(a != b);
 
+
         boolean isBigger = a > b;
         System.out.println(isBigger);
 
